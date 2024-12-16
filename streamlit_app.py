@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.title("🎈 My new app")
+st.title("LIDPlotter")
 st.write(
-    "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
+    "This basic tool allows you to import a photometric data file (either IES or LDT), and from that extract overview information as well as a formatted polar intensity plot."
 )
