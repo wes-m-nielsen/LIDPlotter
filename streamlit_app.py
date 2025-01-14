@@ -18,14 +18,19 @@ uploaded_file = st.file_uploader(
     accept_multiple_files=False,
     type = ['IES', 'LDT']
     )
+st.write(uploaded_file.name)
 
 if st.button("Evaluate"):
     st.write("Orright then, here ya go")
 
     if uploaded_file is not None:
         # To convert to a string based IO:
-        file = StringIO(uploaded_file.getvalue().decode("utf-8"))
-        #st.write(stringio)
+        #file = StringIO(uploaded_file.getvalue().decode("utf-8"))
+
+        #dataframe = pd.read_csv(uploaded_file)
+        #st.write(dataframe)
+
+        
 
         metadata = {}
         angles = []
@@ -36,9 +41,7 @@ if st.button("Evaluate"):
         # Remove any empty lines
         lines = [line.strip() for line in lines if line.strip()]
         
-        # Identify file type
-        file_ext = uploaded_file[-3:].lower()
-        
+       
         # Start parsing the IES file
         i = 0
         while i < len(lines):
